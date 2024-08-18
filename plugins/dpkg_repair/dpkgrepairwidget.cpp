@@ -110,7 +110,9 @@ void DPKGRepairWidget::onRepairClicked()
 
     for (const auto &info : m_toolsProxy->diskInfos())
     {
-        if (info.osName.contains("deepin", Qt::CaseInsensitive))
+        if (info.osName.contains("deepin", Qt::CaseInsensitive) ||
+            info.osName.contains("gxde", Qt::CaseInsensitive) ||
+            info.osName.contains("GXDE", Qt::CaseInsensitive))
             thrd->appendRoot(info.mountPoint);
     }
 

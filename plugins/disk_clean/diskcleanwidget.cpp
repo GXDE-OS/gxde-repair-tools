@@ -148,7 +148,9 @@ void DiskCleanWidget::setToolsProxy(RepairToolsProxy *proxy)
         const QString &os_name = diskInfo.osName;
         const QString &disk = diskInfo.diskPath;
 
-        if (!os_name.contains("deepin", Qt::CaseInsensitive))
+        if ((!os_name.contains("deepin", Qt::CaseInsensitive) &&
+             !os_name.contains("gxde", Qt::CaseInsensitive) &&
+             !os_name.contains("GXDE", Qt::CaseInsensitive)))
             continue;
         m_diskSelectBox->addItem(tr("%1 (on %2)").arg(os_name).arg(disk), QVariant::fromValue(diskInfo));
     }

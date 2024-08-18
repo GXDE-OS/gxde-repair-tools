@@ -63,7 +63,9 @@ QPair<QString, QString> GrubRepairThread::primarySystemRoot()
 {
     for (const auto &disk : m_toolsProxy->diskInfos())
     {
-        if (!disk.osName.contains("deepin", Qt::CaseInsensitive))
+        if (!disk.osName.contains("deepin", Qt::CaseInsensitive) &&
+            !disk.osName.contains("gxde", Qt::CaseInsensitive) &&
+            !disk.osName.contains("GXDE", Qt::CaseInsensitive))
             continue;
 
         return QPair<QString, QString>(partition_disk(disk.diskPath), disk.mountPoint);
