@@ -1,5 +1,5 @@
 Format: http://dep.debian.net/deps/dep5
-Upstream-Name: deepin-repair-tools
+Upstream-Name: gxde-repair-tools
 
 Files: *
 Copyright: 2018 Deepin Technology Co., Ltd.

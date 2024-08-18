@@ -11,7 +11,7 @@ DPKGRepairThread::DPKGRepairThread(QObject *parent)
 
 void DPKGRepairThread::run()
 {
-    const QString sh = "/usr/lib/deepin-repair-tools/plugins/dpkg-repair/dpkg_repair.sh";
+    const QString sh = "/usr/lib/gxde-repair-tools/plugins/dpkg-repair/dpkg_repair.sh";
 
     bool failed = false;
 

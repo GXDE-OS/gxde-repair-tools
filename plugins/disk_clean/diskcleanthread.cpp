@@ -32,7 +32,7 @@ DiskCleanThread::DiskCleanThread(QObject *parent)
 
 void DiskCleanThread::run()
 {
-    const QString sh = "/usr/lib/deepin-repair-tools/plugins/disk-clean/disk_clean.sh";
+    const QString sh = "/usr/lib/gxde-repair-tools/plugins/disk-clean/disk_clean.sh";
 
     QElapsedTimer elapsedTimer;
     elapsedTimer.start();

@@ -13,7 +13,7 @@ FSRepairThread::FSRepairThread(QObject *parent)
 
 void FSRepairThread::run()
 {
-    const QString sh = "/usr/lib/deepin-repair-tools/fsck_repair.sh";
+    const QString sh = "/usr/lib/gxde-repair-tools/fsck_repair.sh";
 
     const RunResult &r = execAsChrootSynchronous("/", sh, QStringList() << m_partion);
 

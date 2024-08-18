@@ -16,7 +16,7 @@ FSCheckThread::FSCheckThread(QObject *parent)
 
 void FSCheckThread::run()
 {
-    const QString sh = "/usr/lib/deepin-repair-tools/fsck_check.sh";
+    const QString sh = "/usr/lib/gxde-repair-tools/fsck_check.sh";
 
     for (const QString &device : listUnmountDevices())
     {

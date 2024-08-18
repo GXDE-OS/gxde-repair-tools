@@ -1,19 +1,19 @@
-Source: deepin-repair-tools
+Source: gxde-repair-tools
 Section: utils
 Priority: optional
-Maintainer: 石博文 <sbw@sbw.so>
+Maintainer: gfdgd_xi <3025613752@qq.com>
 Build-Depends: debhelper (>= 9), cmake, pkg-config, libqt5widgets5, libqt5concurrent5, libdtkwidget2-dev, qtbase5-dev, qttools5-dev-tools
 Standards-Version: 3.9.8
-Homepage: https://www.deepin.com/
+Homepage: https://gxde.gfdgdxi.top
 
-Package: deepin-repair-tools
+Package: gxde-repair-tools
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, os-prober
-Description: deepin system repair tools
- Deepin Repair Tools is a useful tools for system repair & clean.
+Description: GXDE system repair tools
+ GXDE Repair Tools is a useful tools for system repair & clean.
 
-Package: deepin-repair-tools-dev
+Package: gxde-repair-tools-dev
 Architecture: any
 Depends: ${misc:Depends}
-Description: deepin system repair tools - dev files
- Deepin Repair Tools is a useful tools for system repair & clean.
+Description: GXDE system repair tools - dev files
+ GXDE Repair Tools is a useful tools for system repair & clean.

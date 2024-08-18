@@ -37,15 +37,15 @@ int main(int argc, char *argv[])
     DApplication::loadDXcbPlugin();
     DApplication app(argc, argv);
 
-    app.setOrganizationName("deepin");
-    app.setApplicationName("deepin-repair-tools");
+    app.setOrganizationName("GXDE");
+    app.setApplicationName("gxde-repair-tools");
     app.setApplicationVersion(VERSION);
-    app.setApplicationAcknowledgementPage("https://www.deepin.org/acknowledgments/deepin-repair/");
+    app.setApplicationAcknowledgementPage("https://gxde.gfdgdxi.top");
     app.loadTranslator();
 //    app.loadTranslator(QList<QLocale>() << QLocale("zh_CN"));
-    app.setProductIcon(QIcon::fromTheme("deepin-repair-tools"));
-    app.setProductName(QApplication::translate("main", "Deepin Repair"));
-    app.setApplicationDescription(QApplication::translate("main", "Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc."));
+    app.setProductIcon(QIcon::fromTheme("gxde-repair-tools"));
+    app.setProductName(QApplication::translate("main", "GXDE Repair"));
+    app.setApplicationDescription(QApplication::translate("main", "GXDE Repair is a tool to help users quickly fix some issues in GXDE, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc."));
     app.setTheme("light");
     app.setAttribute(Qt::AA_UseHighDpiPixmaps);
 
@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
     argsParser.addOption(envTestOption);
     argsParser.process(app);
 
-    if (!app.setSingleInstance("deepin-repair-tools"))
+    if (!app.setSingleInstance("gxde-repair-tools"))
         return -1;
 
     // env test ok, quit.

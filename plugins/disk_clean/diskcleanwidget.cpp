@@ -206,7 +206,7 @@ void DiskCleanWidget::cleanCancel()
 
 void DiskCleanWidget::refreshDiskInfo()
 {
-    const auto sh = "/usr/lib/deepin-repair-tools/plugins/disk-clean/disk_size.sh";
+    const auto sh = "/usr/lib/gxde-repair-tools/plugins/disk-clean/disk_size.sh";
     const DiskInfo &diskInfo = m_diskSelectBox->currentData().value<DiskInfo>();
 
     const RunResult &r = m_toolsProxy->execAsChrootSynchronous("/", sh, QStringList() << diskInfo.diskPath);

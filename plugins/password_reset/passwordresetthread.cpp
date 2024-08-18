@@ -10,7 +10,7 @@ PasswordResetThread::PasswordResetThread(QObject *parent)
 
 void PasswordResetThread::run()
 {
-    const QString sh = "/usr/lib/deepin-repair-tools/plugins/password-reset/password_reset.sh";
+    const QString sh = "/usr/lib/gxde-repair-tools/plugins/password-reset/password_reset.sh";
 
     qDebug() << Q_FUNC_INFO << m_root << m_user << m_pwd;
 

@@ -10,7 +10,7 @@ PermissionsRepairThread::PermissionsRepairThread(QObject *parent)
 
 void PermissionsRepairThread::run()
 {
-    const QString sh = "/usr/lib/deepin-repair-tools/plugins/permissions-repair/permissions-repair.sh";
+    const QString sh = "/usr/lib/gxde-repair-tools/plugins/permissions-repair/permissions-repair.sh";
 
     bool failed = false;
 

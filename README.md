@@ -1,5 +1,5 @@
-# Deepin Repair Tools
-> __A useful tools for repair & clean your Deepin OS.__
+# GXDE Repair Tools
+> __A useful tools for repair & clean your GXDE OS.__
 
 ### Project Goals
 * [x] Grub repair
@@ -15,12 +15,12 @@
 * pkg-config
 
 ```
-git clone git@github.com:sbwtw/deepin-repair-tools.git
-cd deepin-repair-tools
+git clone git@github.com:sbwtw/gxde-repair-tools.git
+cd gxde-repair-tools
 cmake ..
 make -j4
 sudo make install
 ```
 
 ### LICENSE
-Deepin Repair Tools is licensed under GPL
+GXDE Repair Tools is licensed under GPL

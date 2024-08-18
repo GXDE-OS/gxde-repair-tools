@@ -4,9 +4,9 @@ if (NOT DEFINED VERSION)
     set(VERSION 1.0.1)
 endif ()
 
-project(deepin-repair-tools)
+project(gxde-repair-tools)
 
-set(BIN_NAME deepin-repair-tools)
+set(BIN_NAME gxde-repair-tools)
 #set(CMAKE_VERBOSE_MAKEFILE ON)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -19,20 +19,20 @@ if (NOT (${CMAKE_BUILD_TYPE} MATCHES "Debug"))
 
     # generate policy file translations
     execute_process (
-        COMMAND deepin-policy-ts-convert policy2ts com.deepin.repair-tools.policy.tmp translations/policy
+        COMMAND gxde-policy-ts-convert policy2ts com.gxde.repair-tools.policy.tmp translations/policy
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     )
 
     # generate back to policy file
     execute_process (
-        COMMAND deepin-policy-ts-convert ts2policy com.deepin.repair-tools.policy.tmp translations/policy com.deepin.repair-tools.policy
+        COMMAND gxde-policy-ts-convert ts2policy com.gxde.repair-tools.policy.tmp translations/policy com.gxde.repair-tools.policy
         RESULT_VARIABLE POLICY_FILE_GENERATED
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     )
 
     # fallback
     if (NOT ${POLICY_TS_GENERATED} EQUAL 0)
-        execute_process(COMMAND cp com.deepin.repair-tools.policy.tmp com.deepin.repair-tools.policy WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
+        execute_process(COMMAND cp com.gxde.repair-tools.policy.tmp com.gxde.repair-tools.policy WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
     endif ()
 
     # generate qm
@@ -70,33 +70,33 @@ if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 endif ()
 
 # bin
-install(FILES deepin-repair-tools-pkexec DESTINATION bin
+install(FILES gxde-repair-tools-pkexec DESTINATION bin
         PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
 install(TARGETS ${BIN_NAME} DESTINATION sbin)
 
 # desktop
-install(FILES deepin-repair-tools.desktop DESTINATION share/applications)
+install(FILES gxde-repair-tools.desktop DESTINATION share/applications)
 
 # icon
-install(FILES deepin-repair-tools.svg
+install(FILES gxde-repair-tools.svg
         DESTINATION share/icons/hicolor/scalable/apps)
 
 # scripts
 file(GLOB SCRIPTS "src/*.sh")
-install(FILES ${SCRIPTS} DESTINATION lib/deepin-repair-tools
+install(FILES ${SCRIPTS} DESTINATION lib/gxde-repair-tools
         PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
 
 # qm files
 file(GLOB QM_FILES "translations/*.qm")
 install(FILES ${QM_FILES}
-        DESTINATION share/deepin-repair-tools/translations)
+        DESTINATION share/gxde-repair-tools/translations)
 
 # policy kit
-install(FILES com.deepin.repair-tools.policy
+install(FILES com.gxde.repair-tools.policy
         DESTINATION share/polkit-1/actions/)
 
 # dev files
 install (FILES
             src/repairtoolsproxy.h
             src/repairtoolsinterface.h
-         DESTINATION include/deepin-repair-tools)
+         DESTINATION include/gxde-repair-tools)

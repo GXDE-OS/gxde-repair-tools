@@ -153,11 +153,11 @@ QList<UserInfo> list_os_user_info(const QString &rootPath, const QString &osName
     QList<UserInfo> r;
 
     // NOTE(sbw): We only check deepin OS now, but I think we should works for any linux distro.
-    if (osName.isEmpty() || !osName.contains("deepin", Qt::CaseInsensitive))
+    if (osName.isEmpty() || !osName.contains("GXDE", Qt::CaseInsensitive))
         return r;
 
-    const QString chroot_hook_script = "/usr/lib/deepin-repair-tools/chroot_hook.sh";
-    const QString list_users_script = "/usr/lib/deepin-repair-tools/list_user_info.sh";
+    const QString chroot_hook_script = "/usr/lib/gxde-repair-tools/chroot_hook.sh";
+    const QString list_users_script = "/usr/lib/gxde-repair-tools/list_user_info.sh";
 
     QProcess process;
     process.start("/bin/sh", QStringList() << chroot_hook_script << rootPath << list_users_script);

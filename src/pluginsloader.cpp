@@ -19,7 +19,7 @@ void PluginsLoader::load()
 #ifdef QT_DEBUG
     pluginsDir.cd("plugins");
 #else
-    pluginsDir.cd("../lib/deepin-repair-tools/plugins");
+    pluginsDir.cd("../lib/gxde-repair-tools/plugins");
 #endif
     const QStringList plugins = pluginsDir.entryList(QDir::Files);
 

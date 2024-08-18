@@ -20,7 +20,7 @@ target_link_libraries(${PLUGIN_NAME} PRIVATE
     ${Qt5Concurrent_LIBRARIES}
 )
 
-install(TARGETS ${PLUGIN_NAME} LIBRARY DESTINATION lib/deepin-repair-tools/plugins)
+install(TARGETS ${PLUGIN_NAME} LIBRARY DESTINATION lib/gxde-repair-tools/plugins)
 install(FILES disk_clean.sh disk_size.sh
-        DESTINATION lib/deepin-repair-tools/plugins/${PLUGIN_NAME}
+        DESTINATION lib/gxde-repair-tools/plugins/${PLUGIN_NAME}
         PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)

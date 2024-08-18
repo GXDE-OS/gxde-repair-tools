@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# env test
+#/usr/sbin/gxde-repair-tools -t
+
+#if [ $? -eq 0 ]; then
+    pkexec "/usr/sbin/gxde-repair-tools" "$@"
+#fi

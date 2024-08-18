@@ -25,7 +25,7 @@ GrubRepairThread::GrubRepairThread(QObject *parent)
 void GrubRepairThread::run()
 {
     const auto &primary_info = primarySystemRoot();
-    const QString sh = "/usr/lib/deepin-repair-tools/plugins/grub-repair/grub-repair.sh";
+    const QString sh = "/usr/lib/gxde-repair-tools/plugins/grub-repair/grub-repair.sh";
 
     bool failed = false;
 

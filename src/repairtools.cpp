@@ -19,7 +19,7 @@ RepairTools::RepairTools(QWidget *parent)
 {
     auto *tbar = titlebar();
     tbar->setTitle(QString());
-    tbar->setIcon(QIcon::fromTheme("deepin-repair-tools"));
+    tbar->setIcon(QIcon::fromTheme("gxde-repair-tools"));
     tbar->setBackgroundTransparent(true);
 
     ScanningPage *sp = new ScanningPage;
@@ -41,7 +41,7 @@ bool RepairTools::onLinkClicked(const QUrl &link)
 
     QProcess proc;
     proc.setProgram("bash");
-    proc.setArguments(QStringList() << "/usr/lib/deepin-repair-tools/open_link.sh" << link.toString() << pwd->pw_name);
+    proc.setArguments(QStringList() << "/usr/lib/gxde-repair-tools/open_link.sh" << link.toString() << pwd->pw_name);
     proc.start();
     proc.waitForFinished();
 

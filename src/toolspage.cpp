@@ -11,7 +11,7 @@
 #include <QProcess>
 #include <QThread>
 
-const QString chroot_hook_script = "/usr/lib/deepin-repair-tools/chroot_hook.sh";
+const QString chroot_hook_script = "/usr/lib/gxde-repair-tools/chroot_hook.sh";
 
 const RunResult execAsChrootSynchronous(const QString &root, const QString &script, const QStringList &args)
 {
