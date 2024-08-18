@@ -7,12 +7,14 @@ Standards-Version: 3.9.8
 Homepage: https://gxde.gfdgdxi.top
 
 Package: gxde-repair-tools
+Replaces: deepin-repair-tools
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, os-prober
 Description: GXDE system repair tools
  GXDE Repair Tools is a useful tools for system repair & clean.
 
 Package: gxde-repair-tools-dev
+Replaces: deepin-repair-tools-dev
 Architecture: any
 Depends: ${misc:Depends}
 Description: GXDE system repair tools - dev files
